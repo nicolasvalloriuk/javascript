@@ -93,13 +93,54 @@ console.log(commonNumbers([1, 3, 5, 7, 9, 11, 13, 15],[2, 6, 7, 9, 13, 4])); // 
 
 // 7. Create a function that receives an array of numbers and returns the sum of all even numbers
 
+function arraySum(array3) {
+  let sum1 = 0 ;
 
+  for (let number of array3) {
+    if (number % 2 === 0) {
+      sum1 += number;
+    }
+  }
+  return sum1;
+}
+
+console.log(arraySum([1, 3, 4, 6, 8]));
 
 // 8. Create a function that receives an array of numbers and returns a new array with each number squared
 
+function arraySquared(array4) {
+  let result = [];
+    
+  array4.forEach(number => {
+    result.push(number ** 2);
+  });
+
+  return result;
+}
+
+console.log(arraySquared([1, 5, 9, 7, 6, 7]))
 
 // 9. Create a function that receives a text string and returns the same string with the words in reverse order
+
+function textString(textNormal) {
+  let words = textNormal.split(" ");
+  let reversedWords = words.reverse();
+  return reversedWords.join(" ") 
+}
+
+console.log(textString("Let this text be reversed and checked by me"))
 
 
 // 10. Create a function that calculates the factorial of a given number
 
+function factorial(n) {
+  let result = 1;
+
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+
+console.log(factorial(5)); // 120
